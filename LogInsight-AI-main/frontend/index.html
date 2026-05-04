@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogInsight AI - Intelligent Log Analysis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 0.75rem; cursor: pointer;">
+                    <span class="nav-logo">📊</span>
+                    <span class="nav-title">LogInsight AI</span>
+                </a>
+            </div>
+            <div class="nav-right">
+                <button class="nav-btn nav-btn-primary" onclick="window.location.href='analyze.html'" title="Quick analyze">
+                    🔍 Analyze
+                </button>
+                <button class="nav-btn nav-btn-secondary" onclick="window.location.href='history.html'" title="View history">
+                    📋 History
+                </button>
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 class="hero-title">Intelligent Log Analysis</h1>
+            <p class="hero-subtitle">Upload your logs. AI analyzes issues. Get actionable fixes.</p>
+        </section>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Feature Cards -->
+            <section class="features-section">
+                <div class="feature-grid">
+                    <!-- Analyze Card -->
+                    <div class="feature-card">
+                        <div class="feature-icon">🔍</div>
+                        <h3>Analyze Logs</h3>
+                        <p>Upload and analyze log files with AI-powered insights. Get instant summaries and error detection.</p>
+                        <a href="analyze.html" class="btn-primary" style="text-decoration: none; display: inline-block;">
+                            Start Analyzing
+                        </a>
+                    </div>
+
+                    <!-- History Card -->
+                    <div class="feature-card">
+                        <div class="feature-icon">📋</div>
+                        <h3>View History</h3>
+                        <p>Access all your previous analyses. Compare results and track error patterns over time.</p>
+                        <a href="history.html" class="btn-primary" style="text-decoration: none; display: inline-block;">
+                            View History
+                        </a>
+                    </div>
+
+                    <!-- Features Card -->
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Instant Insights</h3>
+                        <p>Get AI-generated summaries, detected issues with severity levels, and actionable fix recommendations.</p>
+                        <div class="feature-badge">Built with Groq AI</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Stats -->
+            <section class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalAnalyses">0</div>
+                        <div class="stat-label">Total Analyses</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="issuesDetected">0</div>
+                        <div class="stat-label">Issues Detected</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="filesAnalyzed">0</div>
+                        <div class="stat-label">Files Analyzed</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Supported Formats -->
+            <section class="formats-section">
+                <h2>Supported Log Formats</h2>
+                <div class="formats-list">
+                    <div class="format-badge">JSON Logs</div>
+                    <div class="format-badge">Apache Access Logs</div>
+                    <div class="format-badge">Syslog</div>
+                    <div class="format-badge">Generic Text Logs</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Error Toast -->
+    <div class="toast" id="errorToast"></div>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
